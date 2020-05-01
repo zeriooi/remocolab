@@ -1,4 +1,3 @@
-from google.colab import output
 import apt, apt.debfile
 import pathlib, stat, shutil, urllib.request, subprocess, getpass, time, tempfile
 import secrets, json, re
@@ -83,7 +82,6 @@ def _setupSSHDImpl(ngrok_token, ngrok_region):
   root_password = secrets.token_urlsafe()
   user_password = secrets.token_urlsafe()
   user_name = "colab"
-  output.clear()
   print("_"*60)
   print("‾"*60)
   print(f"root password: {root_password}")
